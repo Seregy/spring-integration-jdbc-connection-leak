@@ -1,0 +1,19 @@
+server:
+  port: 9999
+
+spring:
+  sql:
+    init:
+      mode: ALWAYS
+  datasource:
+    hikari:
+      maximum-pool-size: 2
+      connection-timeout: 3000
+      leak-detection-threshold: 2000
+    url: jdbc:postgresql://localhost:5434/jdbc-example-db
+    username: user
+    password: pass
+
+logging:
+  level:
+    com.zaxxer.hikari: TRACE
